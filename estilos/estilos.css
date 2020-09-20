@@ -1,0 +1,458 @@
+body{
+    margin: 0; /*Poner simepre antes de iniciar a trabajar para quitar los margenes por defecto */ 
+    font-family: 'Poppins', sans-serif; /*Es la tipografía por defecto que tiene el documento */
+}
+
+.contenedor{
+    max-width: 1300px; /* Tamaño de la caja o del contenedor en este caso */
+    width: 90%; /* espacio entre los bordes y la caja*/
+    margin: auto; /* centra la caja en el espacio de la página*/
+}
+
+header{
+    background: linear-gradient(rgba(84,93,220,.9), rgba(96,171,245,.9)), url(../imagenes/fondo.jpg); /* importa la imagen de la ruta y aplica un gradiente con transparencia */
+    height: 100vh; /* 100% del alto de la ventana */
+    background-size: cover; /*cover adapta la imagen al ancho de la pantalla */
+}
+
+
+header ul{
+    display: flex;
+}
+
+header ul li{
+    list-style: none; /* quita el punto por defect de los elementos de la lista */
+    margin-right: 15px; /* margen a la derecha de cada elemento de la lista */
+}
+
+a{
+    text-decoration: none; /* quita subrayado de los link */
+}
+
+#contenedor-menu{
+	display: flex;
+	justify-content: space-between;	
+	padding-top: 20px;
+}
+
+.contenedor-titulo{
+	display: flex;
+	justify-content: center;
+	margin: 18vh 0;
+}
+
+.contenedor-titulo h1{
+	font-size: 60px;
+	color: #fff;
+	margin-bottom: 0;
+}
+
+.contenedor-titulo h2{
+	font-size: 25px;
+	color: #fff;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.contenedor-titulo a, #sobre-mi a, #blog a, #que-esperas a, #contacto input[type="submit"]{ /* se aplican las mismas propiedades a ambos botones*/
+	width: 128px;
+	display: inline-block;
+	background: #5cb8ff;
+	font-size: 14px;
+	color: #fff;
+	padding: 14px 24px;
+	border-radius: 5px;
+
+}
+
+.contenedor-titulo .titulo {
+	text-align: center;
+}
+
+p.logo{
+    color: #ffffff;
+    font-size: 20px;
+}
+
+nav ul li a{
+    color: #ffffff;
+}
+
+/* Sobre mi */
+
+h3{
+	text-align: center; /* texto alineado al centro */
+	font-size: 55px;
+	font-weight: normal; /* peso de la fuente */
+}
+
+.contenedor-sobremi{
+	display: flex;
+	justify-content: space-around; /*separa los dos div */
+}
+
+#sobre-mi .texto{
+	width: 42%; /*el porcentaje va mucho mejor para dispositivos móviles*/
+}
+
+/* servicios */
+
+.contenedor-servicios{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap; /* si el contenido esta ocupando mucho lugar, el proximo div tiene que bajar a otra linea*/
+	color: #ffffff; /*color de la fuente*/
+}
+
+.servicio{
+	width: 24%;
+	padding: 34px 30px 38px 30px;
+	border-radius: 10px; /* suaviza o redondea el borde de la caja o div*/
+	margin-bottom: 40px;
+	position: relative; /*se aplica en el div base donde se encuentra el elemento que se va a posocionar absolutamente*/
+}
+
+h4{
+	font-size: 30px;
+	margin: 0;
+}
+
+.servicio p{
+	margin-bottom: 20px;
+	height: 194px; /* altura constante de las cajas de texto*/
+}
+
+.contenedor-servicios .violeta{
+	background: linear-gradient(to top, #5055df, #6d68f3);
+	box-shadow: 0 12px 30px 0 rgba(80, 85, 223, .37); /*sombra de la caja o div (se puedes generar en internet)*/
+}
+
+.contenedor-servicios .celeste{
+	background: linear-gradient(to top, #40a8f9, #5cb8ff);
+	box-shadow: 0 12px 30px 0 rgba(86, 163, 222, .3);
+}
+
+.ondas{
+	position: absolute; /*sirve apara ubicar el elemento en cualquier parte del div*/
+	left: 0;
+	bottom: 0;
+}
+
+.icono{
+	float: right; /*flotar o mover el contenido hacia la derecha*/;
+}
+
+/* Mis trabajos*/
+
+#mis-trabajos p{
+	text-align: center;
+	color: #000000;
+}
+
+button.owl-prev, button.owl-next{
+	font-size: 40px !important;
+}
+
+span{
+	color: #71bcfa;
+}
+
+/* porqué trabajar conmigo */
+
+.contenedor-trabajar{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+#porque-trabajar .item{
+	width: 28%;
+	text-align: center;
+}
+
+#porque-trabajar ul li{
+	list-style: none;
+}
+
+#porque-trabajar ul li:nth-child(2){ /*Llama al alemento hijo No. 2 (El elemento que se encuentra el la segunda posición de la lista)*/
+	font-weight: bold;
+	font-size: 19px;
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+
+#porque-trabajar ul li:nth-child(3){
+	line-height: 31px; /*alto de linea o interlineado*/
+}
+
+/*blog*/
+
+#blog{
+	background: #f9fafc;
+}
+
+.contenedor-publicaciones{
+	display: flex;
+	justify-content: space-around;
+}
+
+#blog .publicacion{
+	width: 30%;
+	box-shadow: 1px 1px 14px #ccc;
+}
+
+#blog img{
+	width: 100%;;
+}
+
+.contenido{
+	background: #ffffff;
+	padding: 20px;
+}
+
+#blog h4{
+	font-size: 23px;
+	margin-bottom: 15px;
+	margin: 0;
+}
+
+#blog p{
+	color: #5a6169;
+	line-height: 24px;
+	font-size: 16px;
+}
+
+#blog a{
+	width: 87px;
+}
+
+/*qué esperas*/
+
+#que-esperas{
+	background: linear-gradient(rgba(84,93,220,.94), rgba(96,171,245,.9));
+	text-align: center;
+	padding: 50px 0;
+	margin-top: 40px;
+}
+
+#que-esperas h3{
+	font-size: 23px;
+	color: #ffffff;	
+}
+
+/* Contacto */
+
+#contacto form{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 77%;
+	margin: auto;
+}
+
+input[type="text"],input[type="email"]{
+	width: 49%;
+	margin-bottom: 15px;
+	padding: 18px 0;
+	border: 0; /*desaparece el borde*/
+	border-bottom: 1px solid #5cb8ff;
+	font-size: 17px;
+}
+
+textarea{
+	padding: 18px 0;
+	border: 0;
+	border-bottom: 1px solid #5cb8ff;
+	font-size: 17px;
+	margin-bottom: 40px;
+	width: 100%;
+}
+
+#contacto input[type="submit"]{
+	width: 166px;
+	margin: auto;
+}
+
+.contacto-info{
+	display: flex;
+	justify-content: space-around;
+	margin-top: 60px;	
+}
+
+.contacto-info img{
+	width: 10%;
+	vertical-align: middle; /*Alineamiento verticar*/
+	margin-right: 10px;
+}
+
+footer{
+	background: #2f2f22;
+	padding: 40px 0;
+	text-align: center;
+	margin: 40px 0;
+}
+
+footer .contenedor{
+	display: flex;
+	justify-content: center;
+	flex-direction: column; /**/		
+}
+
+footer .redes{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+footer img{
+	/*margin: 0 40px;*/
+	transform: rotate(0); /*estado inical de la animación*/
+	transition: 0.4s;
+}
+
+footer img:hover{ /*hover se usa para dar una accion a un elemento cuando el mouese pase por encima*/
+	transform: rotate(360deg); /*estado final de la animación*/
+	transition: 0.4s;
+}
+
+footer p{
+	color: #ffffff;
+	margin-top: 40px;
+}
+
+/*Icono whatsapp fijo*/
+
+#whatsapp{
+	position: fixed; /*deja fijo en la pantalla el icono de whatsapp*/
+	top: 90%;
+	right: 1%;
+}
+
+html{
+	scroll-behavior: smooth; /*suaviza el scroll de la página*/
+}
+
+#mis-trabajos, #servicios, #sobre-mi, #porque-trabajar, #blog, #contacto{
+	padding: 90px 0;
+}
+
+/*Responsive*/
+
+.menu-icon{
+	display: none; /*ocultar el ícono del menú*/
+}
+
+@media (max-width: 800px){ /*indica que el contenido de la página va a ser visible en dispositivos con un ancho de pantalla máximo de 800px*/
+	header{
+		height: 100vh;
+	}
+
+	.menu-icon{
+		display: block; /*Muentra el icono de menú*/
+		float: right;
+		width: right;
+		height: 35px;
+		margin-top: 15px;
+	}
+
+	header nav{
+		position: absolute;
+		top: 83px;
+		left: 0;
+		height: 268px;
+		background: #5cb8ff;
+		width: 100%;
+		display: none;
+	}
+
+	header nav ul{
+		flex-direction: column;
+	}
+
+	header nav ul li{
+		margin-bottom: 15px;
+	}
+
+	h1{
+		font-size: 40px;
+	}
+
+	h2{
+		font-size: 19px;
+	}
+
+	h3{
+		font-size: 43px;
+	}
+	
+	#sobre-mi .contenedor-sobremi{
+		flex-direction: column;
+	}
+	
+	#sobre-mi img{
+		width: 100%;
+	}
+
+	#sobre-mi .texto{
+		width: 100%;
+	}
+
+	#servicios .contenedor-servicios{
+		flex-direction: column;
+	}
+
+	#servicios .servicio{
+		width: 82%;
+		padding: 34px 30px 69px 30px;
+	}
+
+	#servicios .icono{
+		margin-top: 23px;		
+	}
+
+	#porque-trabajar .contenedor-trabajar{
+		flex-direction: column;
+	}
+
+	#porque-trabajar .item{
+		width: 100%;
+	}
+
+	#porque-trabajar .item ul{
+		padding: 0;
+	}
+
+	#blog .contenedor-publicaciones{
+		flex-direction: column;
+	}
+
+	#blog .publicacion{
+		width: 100%;
+		margin-bottom: 40px;
+	}
+
+	#contacto form{
+		flex-direction: column;
+		width: 100%;
+	}
+
+	input[type="text"],input[type="email"]{
+		width: 100%;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 800px){ /*contenido adaptado para ipad*/
+	header{
+		height: 70vh;
+	}
+
+	#servicios .servicio{
+		margin: auto;
+		margin-bottom: 45px;
+	}
+
+	#blog .publicacion{
+		margin: auto;
+		width: 71%;
+		margin-bottom: 45px;
+	}
+}
